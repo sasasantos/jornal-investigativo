@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+<meta name="theme-color" content="#F2E9D8">
+<title>O Caso Winchester — Jornal Investigativo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="topbar" aria-label="Páginas da matéria">
+  <strong class="brand">Jornal Investigativo</strong>
+  <div class="tabs">
+    <button class="tab active" data-page="0">1 Capa</button>
+    <button class="tab" data-page="1">2 O Caso</button>
+    <button class="tab" data-page="2">3 Pistas</button>
+    <button class="tab" data-page="3">4 Revelação</button>
+    <button class="tab" data-page="4">5 Desfecho</button>
+    <button class="tab" data-page="5">6 Epílogo</button>
+  </div>
+  <button class="print-btn" id="printBtn">🖨 Imprimir / PDF</button>
+</nav>
+
+<main>
+<!-- PÁGINA 1 -->
+<section class="page active">
+  <div class="stamp">CONFIDENCIAL</div>
+  <h1 class="cover-title">🔴 O CASO WINCHESTER</h1>
+  <p class="subtitle">Os segredos por trás de uma casa aparentemente perfeita</p>
+  <hr class="double">
+  <figure class="photo wide-photo"><div class="frame" data-img="/images/fachada.jpg">FOTO: Fachada luxuosa da Casa Winchester</div><figcaption>Arquivo nº 001 — Fachada da residência Winchester</figcaption></figure>
+  <svg class="house" viewBox="0 0 400 120" aria-hidden="true"><polygon points="40,100 200,20 360,100" fill="#5A101B"/><rect x="70" y="100" width="260" height="16" fill="#8B1E2D"/></svg>
+  <p class="lead dropcap"><em>A Empregada</em>, de Freida McFadden, acompanha Millie Calloway, uma jovem que consegue um emprego como empregada na luxuosa casa da família Winchester. O que parece ser uma oportunidade para recomeçar logo se transforma em uma situação cheia de segredos, manipulações e acontecimentos inesperados.</p>
+  <hr class="double">
+  <div class="cols4">
+    <article class="box"><h3>QUEM É MILLIE?</h3><p>Uma jovem com um passado misterioso que tenta reconstruir sua vida.</p></article>
+    <article class="box"><h3>O SEGREDO DE NINA</h3><p>A mulher que parece instável pode não ser quem todos imaginam.</p></article>
+    <article class="box"><h3>A VERDADEIRA FACE DE ANDREW</h3><p>Por trás da imagem de marido perfeito existe uma personalidade muito diferente.</p></article>
+    <article class="box"><h3>AS PISTAS</h3><p>O sótão, os comportamentos de Nina e os avisos de Enzo revelam que existe muito mais acontecendo naquela casa.</p></article>
+  </div>
+</section>
+
+<!-- PÁGINA 2 -->
+<section class="page">
+  <h2>ENTENDA O CASO</h2>
+  <hr class="double">
+  <p class="cols2 dropcap">Millie Calloway está tentando reconstruir sua vida quando recebe uma oportunidade inesperada: trabalhar como empregada na casa da rica família Winchester. A casa é enorme, o salário é bom e o emprego parece perfeito para alguém que precisa de uma segunda chance. Porém, pouco depois de chegar, Millie percebe que aquela família está longe de ser normal. O comportamento de Nina, a personalidade aparentemente perfeita de Andrew e os acontecimentos estranhos dentro da casa fazem Millie começar a desconfiar de que existe algo escondido.</p>
+  <h3 class="section">PERSONAGENS PRINCIPAIS</h3>
+  <div class="chars">
+    <article class="file"><figure class="photo"><div class="frame" data-img="images/millie.jpg">FOTO: Millie</div></figure><h3>MILLIE CALLOWAY</h3><p>Millie é a protagonista da história. Ela está tentando reconstruir sua vida depois de passar por dificuldades e carregar um passado criminal. Ao conseguir o emprego na casa dos Winchester, acredita ter encontrado uma oportunidade de recomeçar. Porém, sua curiosidade e sua aproximação com a família fazem com que ela se envolva cada vez mais nos segredos da casa. Ao longo da história, Millie deixa de ser apenas uma empregada e se torna uma peça fundamental para descobrir a verdade.</p></article>
+    <article class="file"><figure class="photo"><div class="frame" data-img="images/nina.jpg">FOTO: Nina</div></figure><h3>NINA WINCHESTER</h3><p>Nina é esposa de Andrew e mãe de Cecelia. No começo da história, ela é apresentada como uma mulher instável, imprevisível e difícil de lidar. Por causa disso, Millie acredita que Nina é a principal responsável pelos problemas da família. Entretanto, conforme a verdade aparece, descobrimos que seu comportamento está relacionado à situação de abuso e manipulação que enfrenta dentro de casa. Nina também é responsável por contratar Millie como parte de seu plano para enfrentar Andrew.</p></article>
+    <article class="file"><figure class="photo"><div class="frame" data-img="images/andrew.jpg">FOTO: Andrew</div></figure><h3>ANDREW WINCHESTER</h3><p>Andrew é o marido de Nina e pai de Cecelia. Inicialmente, ele parece ser um homem gentil, educado e perfeito, principalmente quando comparado ao comportamento de Nina. Essa imagem faz Millie confiar nele e acreditar que ele é a verdadeira vítima dos problemas familiares. Mais tarde, porém, a história revela que Andrew é manipulador e controlador e que sua aparência de marido perfeito escondia a realidade vivida dentro daquela casa.</p></article>
+    <article class="file"><figure class="photo"><div class="frame" data-img="images/cecilia.jpg">FOTO: Cecilia</div></figure><h3>CECILIA WINCHESTER</h3><p>Cecilia é filha de Nina e Andrew e faz parte da dinâmica familiar que Millie encontra ao chegar à casa. Ela também acaba envolvida nas situações criadas por Andrew e representa uma das razões pelas quais Nina tenta encontrar uma maneira de escapar daquela realidade e proteger sua filha.</p></article>
+    <article class="file"><figure class="photo"><div class="frame" data-img="images/enzo.jpg">FOTO: Enzo</div></figure><h3>ENZO</h3><p>Enzo é o jardineiro da propriedade dos Winchester. Desde o começo, ele percebe que existe algo errado naquela casa e tenta alertar Millie. Mesmo sem revelar imediatamente tudo o que sabe, suas atitudes funcionam como importantes pistas para que Millie comece a questionar aquilo que está acontecendo.</p></article>
+  </div>
+  <aside class="clue"><div class="stamp small">PISTA</div>
+    <figure class="photo"><div class="frame" data-img="images/sotao.jpg">FOTO: O sótão e a porta com tranca externa</div></figure>
+    <div><h3>🔎 PRIMEIRA PISTA — O SÓTÃO</h3><p>Millie descobre que seu quarto fica no sótão e que a porta pode ser trancada pelo lado de fora. O detalhe parece apenas estranho no início, mas posteriormente ganha um significado muito maior dentro da história.</p></div>
+  </aside>
+</section>
+
+<!-- PÁGINA 3 -->
+<section class="page">
+  <h2>COMO TUDO COMEÇA</h2>
+  <hr class="double">
+  <div class="cols2">
+    <p class="dropcap">No início, Millie acredita que encontrou uma boa oportunidade, mas o comportamento de Nina começa a deixá-la desconfortável. Nina parece mudar constantemente de comportamento, cria situações estranhas e trata Millie de maneira contraditória. Enquanto isso, Andrew demonstra compreensão e gentileza, fazendo com que Millie confie cada vez mais nele. A diferença entre os dois faz Millie acreditar que Nina é a verdadeira responsável pelo caos dentro da família.</p>
+    <p>A aproximação entre Millie e Andrew aumenta até que os dois acabam se envolvendo. Quando Nina descobre o que aconteceu, a situação dentro da casa fica ainda mais tensa e sua reação faz Millie acreditar novamente que ela é instável e perigosa. Enzo, o jardineiro, tenta alertar Millie de que existe algo errado com a família, mas ela ainda não consegue compreender o que ele sabe. O comportamento de Nina, a personalidade aparentemente perfeita de Andrew e o estranho quarto no sótão começam a formar um conjunto de pistas que Millie ainda não consegue interpretar.</p>
+  </div>
+  <h3 class="section">QUADRO DE EVIDÊNCIAS</h3>
+  <div class="evidence">
+    <figure class="photo"><div class="frame" data-img="images/evidencia-nina.png">EVIDÊNCIA A: Nina</div><figcaption>Comportamento instável</figcaption></figure>
+    <figure class="photo"><div class="frame" data-img="images/evidencia-andrew.jpg">EVIDÊNCIA B: Andrew</div><figcaption>Gentileza aparente</figcaption></figure>
+    <figure class="photo"><div class="frame" data-img="images/evidencia-enzo.jpg">EVIDÊNCIA C: Enzo</div><figcaption>Os avisos</figcaption></figure>
+    <figure class="photo"><div class="frame" data-img="images/evidencia-sotao.avif">EVIDÊNCIA D: Sótão</div><figcaption>O quarto trancado por fora</figcaption></figure>
+  </div>
+</section>
+
+<!-- PÁGINA 4 -->
+<section class="page">
+  <div class="stamp">REVELADO</div>
+  <h2>A VERDADE SOBRE NINA</h2>
+  <hr class="double">
+  <div class="cols2">
+    <p class="dropcap">A grande reviravolta acontece quando a verdade sobre Nina começa a aparecer. Ela não era simplesmente a mulher instável que Millie imaginava. Na realidade, Nina estava vivendo uma situação de abuso e manipulação causada por Andrew. Ele havia construído uma imagem de marido e pai perfeito enquanto controlava Nina e manipulava as situações ao seu redor para fazer com que outras pessoas acreditassem que ela era responsável pelos problemas da família.</p>
+    <p>Andrew chegou a criar uma situação para fazer Nina parecer perigosa e responsável por colocar Cecilia em risco. Como consequência, Nina acabou sendo internada em uma instituição psiquiátrica. Nina sabia que precisava encontrar uma maneira de enfrentar Andrew e, por isso, decidiu contratar Millie. Ela conhecia o passado da jovem e acreditava que Millie teria condições de enfrentá-lo. O emprego, portanto, não havia sido simplesmente uma coincidência: Millie fazia parte do plano de Nina.</p>
+    <p>O passado de Millie também é revelado. Quando adolescente, ela foi presa depois de matar um garoto que havia tentado violentar sua amiga Kelsey. Esse acontecimento marcou sua vida e fez com que ela carregasse um histórico criminal que dificultava suas oportunidades.</p>
+  </div>
+  <div class="two">
+    <figure class="photo doc"><div class="frame" data-img="images/arquivo-psiquiatrico-nina.jpg">DOCUMENTO: Arquivo psiquiátrico de Nina</div><figcaption>Prontuário — internação</figcaption></figure>
+    <figure class="photo doc"><div class="frame" data-img="images/ficha-policial-millie.jpg">FICHA POLICIAL: Millie Calloway</div><figcaption>Ficha criminal — adolescência</figcaption></figure>
+  </div>
+</section>
+
+<!-- PÁGINA 5 -->
+<section class="page">
+  <h2>MILLIE DESCOBRE TODA A VERDADE</h2>
+  <hr class="double">
+  <div class="cols2">
+    <p class="dropcap">Depois de descobrir o que realmente estava acontecendo com Nina, Millie percebe que havia interpretado toda a situação de maneira errada. Entretanto, descobrir a verdade não significa que ela esteja segura. Andrew acaba prendendo Millie no sótão, o mesmo lugar que desde o começo parecia estranho. Nesse momento, o significado daquele espaço fica ainda mais claro, pois Millie passa a viver uma situação semelhante àquela que Nina havia enfrentado.</p>
+    <p>Millie consegue inverter a situação e colocar Andrew em uma posição de vulnerabilidade. Nina é avisada e retorna para a casa. O confronto termina com a morte de Andrew, enquanto Millie consegue sobreviver. Nina tenta proteger Millie e considera assumir a responsabilidade pelo ocorrido, mas o investigador Connors interpreta a morte de Andrew como um acidente. Durante a investigação, ainda surge uma informação inesperada: Andrew havia sido noivo de Kathleen, filha de Connors.</p>
+  </div>
+  <div class="two">
+    <figure class="photo"><div class="frame" data-img="images/cena-crime-sotao.jpg">FOTO: Cena do crime — sótão trancado</div><figcaption>Local do confronto</figcaption></figure>
+    <figure class="photo doc"><div class="frame" data-img="images/relatorio-connors.jpg">RELATÓRIO POLICIAL: Detetive Connors</div><figcaption>Conclusão: acidente</figcaption></figure>
+  </div>
+</section>
+
+<!-- PÁGINA 6 -->
+<section class="page">
+  <h2>CASO ENCERRADO?</h2>
+  <hr class="double">
+  <div class="two">
+    <figure class="photo"><div class="frame" data-img="images/millie-e-enzo.jpg">FOTO: Millie e Enzo</div></figure>
+    <figure class="photo"><div class="frame" data-img="images/nina-cecilia.jpg">FOTO: Nina e Cecilia</div></figure>
+  </div>
+  <h3 class="section">EPÍLOGO</h3>
+  <div class="cols2">
+    <p class="dropcap">Depois dos acontecimentos, Nina e Cecilia deixam a casa e tentam reconstruir suas vidas. Millie também consegue seguir em frente e passa a enxergar as pessoas e as situações de uma maneira diferente. O que começou como apenas um emprego acaba transformando completamente sua vida e revelando uma realidade que ela jamais imaginaria encontrar.</p>
+    <p>Millie e Enzo passam a ajudar outras mulheres que estão tentando escapar de relacionamentos abusivos. Um ano depois, Millie entrevista Lisa Killeffer e percebe sinais de que ela também pode estar vivendo uma situação de abuso. Nesse momento, Millie entende que Nina havia recomendado seu nome para outras pessoas, mostrando que o que aconteceu na casa dos Winchester não terminou completamente.</p>
+  </div>
+  <h3 class="section">ANÁLISE: APARÊNCIA × REALIDADE</h3>
+  <p>A história trabalha constantemente com a diferença entre aquilo que parece ser verdade e aquilo que realmente está acontecendo. A casa dos Winchester parece representar luxo, conforto e segurança, mas esconde conflitos e segredos. Nina parece instável, mas na realidade é vítima de manipulação. Andrew parece ser um marido perfeito, mas revela uma personalidade controladora. Millie parece ser apenas uma empregada com um passado complicado, mas acaba sendo uma das principais peças para que toda a verdade venha à tona.</p>
+  <h3 class="section">CONCLUSÃO</h3>
+  <p><em>A Empregada</em> utiliza o suspense para fazer o leitor questionar suas próprias conclusões. As informações são apresentadas de maneira que determinadas personagens e situações parecem óbvias no início, mas ganham novos significados conforme a história avança. As reviravoltas, os segredos e a diferença entre aparência e realidade são os principais elementos que tornam o caso Winchester tão envolvente.</p>
+  <blockquote>“NO CASO WINCHESTER, NADA É EXATAMENTE O QUE PARECE.”</blockquote>
+  <div class="stamp closed">ARQUIVO ENCERRADO</div>
+</section>
+</main>
+
+<footer class="pager">
+  <button id="prev">‹ Anterior</button><span id="count">1 / 6</span><button id="next">Próxima ›</button>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
