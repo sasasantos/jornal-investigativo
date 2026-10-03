@@ -10,6 +10,7 @@
     tabs.forEach((t, n) => t.classList.toggle('active', n === current));
     count.textContent = (current + 1) + ' / ' + pages.length;
     window.scrollTo({ top: 0 });
+    tabs[current].scrollIntoView({ block: 'nearest', inline: 'center' });
   }
 
   tabs.forEach(t => t.addEventListener('click', () => show(+t.dataset.page)));
