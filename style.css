@@ -25,7 +25,8 @@ html, body{
 }
 
 html {
-  font-size: 17px
+  font-size: clamp(15.5px, 1.2vw + 12px, 17px);
+  -webkit-text-size-adjust: 100%
 }
 
 body {
@@ -34,7 +35,13 @@ body {
   color: var(--black);
   font-family: 'Libre Baskerville', serif;
   line-height: 1.7;
-  padding-top: 3.6rem
+  overflow-wrap: break-word;
+  padding-left: env(safe-area-inset-left, 0);
+  padding-right: env(safe-area-inset-right, 0)
+}
+
+img, svg {
+  max-width: 100%
 }
 
 p {
@@ -44,10 +51,8 @@ p {
 
 /* barra fixa */
 .topbar {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 10;
   display: flex;
   align-items: center;
@@ -56,7 +61,8 @@ p {
   flex-wrap: wrap;
   background: var(--cream);
   border-bottom: 4px double var(--black);
-  padding: .5rem 1rem
+  padding: .5rem 1rem;
+  padding-top: calc(.5rem + env(safe-area-inset-top, 0px))
 }
 
 .brand {
@@ -128,17 +134,18 @@ h2 {
 }
 
 h2 {
-  font-size: clamp(2rem, 5vw, 3rem)
+  font-size: clamp(1.6rem, 5vw, 3rem);
+  line-height: 1.15
 }
 
 .cover-title {
-  font-size: clamp(2.6rem, 9vw, 5.8rem);
+  font-size: clamp(2.1rem, 9vw, 5.8rem);
   color: var(--red);
   line-height: 1.05
 }
 
 .subtitle {
-  font: italic 500 1.7rem 'Cormorant Garamond', serif;
+  font: italic 500 clamp(1.25rem, 4vw, 1.7rem) 'Cormorant Garamond', serif;
   text-align: center;
   margin: .3rem 0
 }
@@ -150,7 +157,7 @@ h3 {
 }
 
 h3.section {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 3.5vw, 1.5rem);
   border-bottom: 2px solid var(--gold);
   margin-top: 2rem
 }
@@ -177,7 +184,7 @@ p.cols2 {
 
 .cols4 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
   gap: 1.2rem
 }
 
@@ -203,7 +210,7 @@ p.cols2 {
 
 .chars {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 1.4rem
 }
 
@@ -236,8 +243,10 @@ p.cols2 {
 .stamp.closed {
   display: block;
   width: max-content;
+  max-width: 100%;
   margin: 1.5rem auto 0;
-  font-size: 1.6rem
+  text-align: center;
+  font-size: clamp(1rem, 5vw, 1.6rem)
 }
 
 /* fotos */
@@ -293,14 +302,14 @@ figcaption {
 
 .two {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 1.4rem;
   margin-top: 1.5rem
 }
 
 .evidence {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
   gap: 1rem
 }
 
@@ -320,7 +329,7 @@ blockquote {
   margin: 2rem 0 0;
   padding: 1rem;
   text-align: center;
-  font: italic 700 1.7rem 'Playfair Display', serif;
+  font: italic 700 clamp(1.15rem, 4.5vw, 1.7rem) 'Playfair Display', serif;
   color: var(--dark);
   border-top: 4px double var(--black);
   border-bottom: 4px double var(--black)
@@ -339,19 +348,126 @@ blockquote {
   font: 700 .85rem 'Montserrat', sans-serif
 }
 
-@media(max-width:700px) {
-
+/* tablets */
+@media (max-width: 900px) {
   .cols2,
   p.cols2 {
-    column-count: 1
+    column-gap: 1.6rem
+  }
+
+  main {
+    padding: 1.2rem 1rem 1.5rem
+  }
+}
+
+/* celulares */
+@media (max-width: 700px) {
+  .cols2,
+  p.cols2 {
+    column-count: 1;
+    text-align: left
+  }
+
+  .file p {
+    text-align: left
   }
 
   .clue {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
+    padding-top: 1.8rem
   }
 
-  body {
-    padding-top: 6.5rem
+  .clue .photo {
+    max-width: 420px;
+    margin-inline: auto;
+    width: 100%
+  }
+
+  .doc .frame {
+    max-height: 70vh
+  }
+
+  /* barra: marca + imprimir na 1ª linha, abas rolam na 2ª */
+  .topbar {
+    flex-wrap: wrap;
+    gap: .4rem .6rem;
+    padding-left: max(.8rem, env(safe-area-inset-left, 0px));
+    padding-right: max(.8rem, env(safe-area-inset-right, 0px))
+  }
+
+  .brand {
+    order: 1;
+    font-size: 1rem
+  }
+
+  .print-btn {
+    order: 2;
+    margin-left: auto
+  }
+
+  .tabs {
+    order: 3;
+    flex: 1 0 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: .15rem
+  }
+
+  .tabs::-webkit-scrollbar {
+    display: none
+  }
+
+  .tab {
+    flex: 0 0 auto;
+    white-space: nowrap
+  }
+
+  .tab,
+  .print-btn,
+  .pager button {
+    min-height: 40px
+  }
+
+  /* paginação sempre ao alcance do polegar */
+  .pager {
+    position: sticky;
+    bottom: 0;
+    z-index: 9;
+    background: var(--cream);
+    gap: .8rem;
+    justify-content: space-between;
+    padding: .6rem max(1rem, env(safe-area-inset-right, 0px)) calc(.6rem + env(safe-area-inset-bottom, 0px)) max(1rem, env(safe-area-inset-left, 0px))
+  }
+
+  .pager button {
+    flex: 1 1 0;
+    max-width: 9rem
+  }
+
+  .dropcap::first-letter {
+    font-size: 3rem
+  }
+}
+
+/* telas muito pequenas */
+@media (max-width: 380px) {
+  .brand {
+    display: none
+  }
+
+  .print-btn {
+    margin-left: 0
+  }
+
+  .box,
+  .file {
+    padding: .8rem
+  }
+
+  .stamp {
+    letter-spacing: .12em
   }
 }
 
@@ -369,6 +485,11 @@ blockquote {
   .topbar,
   .pager {
     display: none
+  }
+
+  .cols2,
+  p.cols2 {
+    column-count: 2
   }
 
   .page {
